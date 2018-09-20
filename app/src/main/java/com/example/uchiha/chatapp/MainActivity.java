@@ -81,6 +81,10 @@ public class MainActivity extends AppCompatActivity {
             Intent settingintent=new Intent(MainActivity.this,Setting_Activity.class);
             startActivity(settingintent);
         }
+        if(item.getItemId()== R.id.main_allusersbtn){
+            Intent userintent=new Intent(MainActivity.this,Alluser_Activity.class);
+            startActivity(userintent);
+        }
 
         return true;
     }

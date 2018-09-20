@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.uchiha.chatapp">
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -27,12 +28,22 @@
             android:name=".LoginActivity"
             android:parentActivityName=".StartActivity" />
         <activity android:name=".Setting_Activity" />
-        <activity android:name=".Alluser_Activity" />
+        <activity
+            android:name=".Alluser_Activity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+        <activity
+            android:name=".Status_Activity"
+            android:parentActivityName=".Setting_Activity" />
 
-        <activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
-            android:theme="@style/Base.Theme.AppCompat"/>
-        <activity android:name=".Status_Activity"
-            android:parentActivityName=".Setting_Activity"></activity>
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <activity android:name=".Profile_Activity"
+            android:parentActivityName=".Alluser_Activity"></activity>
     </application>
 
 </manifest>
